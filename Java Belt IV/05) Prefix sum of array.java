@@ -15,10 +15,9 @@ public class Solution {
             arr[i] = sc.nextInt();
         }
 
-        int sum = 0;
         for (int i = 0; i < n; i++) {
-            sum += arr[i];
-            System.out.print(sum + " ");
+            arr[i] = arr[i] + arr[i - 1]
+            System.out.print(arr[i] + " ");
         }
     }
 }
