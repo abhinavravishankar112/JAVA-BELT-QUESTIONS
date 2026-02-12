@@ -11,12 +11,17 @@ public class Solution {
         int n = sc.nextInt();
         int[] arr = new int[n];
 
+        // Input
         for (int i = 0; i < n; i++) {
             arr[i] = sc.nextInt();
         }
 
+        // First element remains same
+        System.out.print(arr[0] + " ");
+
+        // Calculate prefix sum
         for (int i = 1; i < n; i++) {
-            arr[i] = arr[i] + arr[i - 1]
+            arr[i] = arr[i] + arr[i - 1];
             System.out.print(arr[i] + " ");
         }
     }
