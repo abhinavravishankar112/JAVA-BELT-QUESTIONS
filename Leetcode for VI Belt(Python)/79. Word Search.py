@@ -31,4 +31,5 @@ class Solution:
                 if dfs(r, c, 0):
                     return True
         return False
-        
+#time complexity: O(m × n × 3^L)
+#space complexity: O(L) - recursion stack
