@@ -24,4 +24,6 @@ class Solution:
             backtrack(0, "")
         return res
 
-        
+#Time Complexity = O(n × 4ⁿ)
+#Space Complexity(auxilary) = O(n)
+#Space Complexity = O( n x 4ⁿ)
