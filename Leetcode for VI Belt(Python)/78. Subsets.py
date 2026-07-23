@@ -18,4 +18,4 @@ class Solution:
         backtrack(0)
         return res
 #Time Complexity = O(n × 2ⁿ)
-#Space Complexity = O(n × 2ⁿ)
+#Space Complexity = O(n)
