@@ -2,16 +2,18 @@
 class Solution:
     def generateParenthesis(self, n: int) -> List[str]:
         res = []
-        def backtrack(curr, openCount, closeCount):
-            if len(curr) == 2*n:
-                res.append(curr)
+        def backtrack(s, open, closed):
+            if open == closed == n:
+                res.append(s)
                 return
             
-            if openCount < n:
-                backtrack(curr + "(", openCount + 1, closeCount)
-
-            if closeCount < openCount:
-                backtrack(curr + ")", openCount, closeCount + 1)
+            if open < n:
+                backtrack(s + "(", open + 1, closed)
             
+            if closed < open:
+                backtrack(s + ")", open, closed+1)
+        
         backtrack("", 0, 0)
         return res
+#time complexity: O(Cₙ × n) - Catalan number
+#space complexity: O(n) - recursion stack
